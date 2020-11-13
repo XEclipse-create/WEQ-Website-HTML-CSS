@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --accent-color: #641bff;
+  --heading-font-family: "Poppins", sans-serif;
+  --body-font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url(/static/images/redforest.jpg);
+  background-size: auto;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--body-font-family);
+}
+.customer-comparison {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin: 1rem;
+}
+.customer-column {
+  background: white;
+  box-shadow: 0 12px 30px rgba(40, 8, 221, 0.808);
+  padding: 2rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 275px;
+  border-radius: 8px;
+}
+
+.customer-column.popular {
+  position: relative;
+  background: black;
+  box-shadow: 0 7px 30px rgba(52, 31, 165, 0.6);
+  color: white;
+  margin-top: -2.5rem;
+  padding-top: 4.5rem;
+  margin-bottom: -2.5rem;
+  padding-bottom: 4.5rem;
+}
+.customer-column:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.customer-column:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.customer-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.customer {
+  font-size: 2rem;
+  display: flex;
+}
+.plan-name {
+  font-size: 1rem;
+  margin-top: 3rem;
+  font-style: italic;
+}
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+.customer-column.popular .divider {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.feature {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+.feature img {
+  height: 1.1em;
+  width: 1.1em;
+  margin-right: 0.5rem;
+}
+.feature.inactive {
+  color: #999;
+  text-decoration-line: line-through;
+}
+
+.act {
+  padding: 0.75rem 1rem;
+  border: none;
+  background: black;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 100ms;
+  transform: scale(1);
+  margin-top: 1.5rem;
+  font-size: small;
+}
+.customer-column.popular .act {
+  background: white;
+  color: #fc466b;
+}
+.act:hover,
+.act:focus {
+  transform: scale(1.1);
+}
