@@ -476,33 +476,34 @@ function () {
 		event.preventDefault();
 	});
 
-	
-	$('#Signin').on('submit', function (event) {
-    $.alert($('#email').val())
-	/*	$.ajax({
-                    data :{
+	$('#Signin').click(function(){
 
-                      email : $('#email').val(),
-                        pass:$('#Pass').val()
-                    },
-                    type : "POST",
-                    url: "/login_action"
+    $.ajax({
+            data :{
+
+                email : $('#email').val(),
+                pass:$('#Pass').val()
+            
+              },
+            type : "POST",
+            url: "/login_action"
           })
               .done(function(data)
               {
 		
-				  if (data.link)
-                  {
-					$(location).attr('href', data.link);
-                  }
-                  else{
-                      
-					alert("Invalid Credentials");
-                  }
+                if (data.link)
+                {
+                  $(location).attr('href', data.link);
+                }
+                else{
+                            
+                    alert("Invalid Credentials");
+                }
 
-              });*/
+              });
 	event.preventDefault();
-});
+
+  });
 			
 	
 });
