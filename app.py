@@ -63,8 +63,9 @@ def login_action():
     print(email, password)
     data = {}
     result = mongo.CustLogin(email, password)
+    print(result)
     if result['check']:
-        return redirect(url_for(home2))
+    
         session['email'] = email
         session['name'] = result['name']
 
