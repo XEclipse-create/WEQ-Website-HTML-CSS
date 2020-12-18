@@ -1,2 +1,2 @@
 # WEQ-Website
-It is an virtual queue management system
+It is a virtual queue management system
